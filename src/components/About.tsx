@@ -3,7 +3,7 @@ import adamEcho from "../assets/adam-echo.jpg";
 
 export default function About() {
   return (
-    <section id="about" className="bg-brand-green-50 py-20 sm:py-28">
+    <section id="about" className="bg-white py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div className="order-2 lg:order-1">
@@ -24,10 +24,11 @@ export default function About() {
             </p>
 
             <p className="mt-4 text-lg leading-relaxed text-brand-ink-700/85">
-              We inspect, install, and repair septic systems in NC, and
-              install and repair septic systems in SC. We also provide
-              grading, land clearing and excavating, dig perc holes, and
-              install or refresh driveways &mdash; all with the same
+              We offer septic inspections (including POS), install systems
+              from conventional to drip for residential and commercial
+              properties, and handle repairs across NC and SC. We also
+              provide grading, land clearing and excavating, dig perc holes,
+              and install or refresh driveways &mdash; all with the same
               hands-on, family-first approach.
             </p>
 

@@ -23,9 +23,21 @@ export const services = [
     icon: "ClipboardCheck",
   },
   {
-    title: "Septic Installation & Repair",
+    title: "POS Inspections",
     description:
-      "Full septic system installation and repair services across North Carolina and South Carolina, done right the first time.",
+      "Point-of-sale septic inspections for real estate transactions — clear, reliable reports when buying or selling a property.",
+    icon: "FileSearch",
+  },
+  {
+    title: "Septic Installation",
+    description:
+      "Full septic system installs for residential and commercial properties — from conventional systems to drip irrigation and everything in between.",
+    icon: "Hammer",
+  },
+  {
+    title: "Septic Repair",
+    description:
+      "Expert septic system repairs across North Carolina and South Carolina, done right the first time.",
     icon: "Wrench",
   },
   {
@@ -70,6 +82,7 @@ export const serviceAreas = [
 export const navLinks = [
   { label: "Home", href: "#home" },
   { label: "Services", href: "#services" },
+  { label: "Projects", href: "#projects" },
   { label: "About", href: "#about" },
   { label: "Service Area", href: "#areas" },
   { label: "Contact", href: "#contact" },

@@ -1,6 +1,8 @@
 import {
   CircleDot,
   ClipboardCheck,
+  FileSearch,
+  Hammer,
   Mountain,
   Route,
   Trees,
@@ -10,6 +12,8 @@ import { business, services } from "../data/business";
 
 const icons = {
   ClipboardCheck,
+  FileSearch,
+  Hammer,
   Wrench,
   Mountain,
   Trees,
