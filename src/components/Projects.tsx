@@ -171,10 +171,10 @@ export default function Projects() {
         >
           <div className="flex items-center justify-between gap-4 px-4 py-4 sm:px-6">
             <div className="min-w-0">
-              <p className="truncate text-sm font-semibold text-white">
+              <p className="text-sm font-semibold text-white sm:text-base">
                 {lightboxPhoto.alt}
               </p>
-              <p className="text-xs text-white/55">
+              <p className="mt-0.5 text-xs text-white/55">
                 {lightboxPhoto.categoryTitle} · {lightboxIndex + 1} of{" "}
                 {photos.length}
               </p>
