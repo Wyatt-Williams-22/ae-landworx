@@ -3,27 +3,21 @@
  * Keep the public link formats in sync with src/data/reviewLinks.ts.
  */
 
-const MAPS_SEARCH_QUERY = "A&E Landworx Union County NC";
+/** Must match googlePlaceId and googleListingName in src/data/business.ts. */
+const DEFAULT_PLACE_ID = "ChIJY_jy-dpwGasRzM7D46Z3Njg";
+const LISTING_NAME = "A&E Landworx Septic & Excavation";
 
 export function buildReviewLinks(placeId) {
-  const id = typeof placeId === "string" ? placeId.trim() : "";
-  const mapsSearch = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(MAPS_SEARCH_QUERY)}`;
-
-  if (!id) {
-    return {
-      placeId: "",
-      writeReviewUrl: mapsSearch,
-      reviewsUrl: mapsSearch,
-      mapsUrl: mapsSearch,
-    };
-  }
-
+  const trimmed = typeof placeId === "string" ? placeId.trim() : "";
+  const id = trimmed || DEFAULT_PLACE_ID;
   const encoded = encodeURIComponent(id);
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(LISTING_NAME)}&query_place_id=${encoded}`;
+
   return {
     placeId: id,
     writeReviewUrl: `https://search.google.com/local/writereview?placeid=${encoded}`,
-    reviewsUrl: `https://search.google.com/local/reviews?placeid=${encoded}`,
-    mapsUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(MAPS_SEARCH_QUERY)}&query_place_id=${encoded}`,
+    reviewsUrl: mapsUrl,
+    mapsUrl,
   };
 }
 

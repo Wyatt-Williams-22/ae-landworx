@@ -1,6 +1,6 @@
-/** Keep these URL formats in sync with server/googleReviews.mjs. */
+import { business } from "./business";
 
-const MAPS_SEARCH_QUERY = "A&E Landworx Union County NC";
+/** Keep these URL formats in sync with server/googleReviews.mjs. */
 
 export type ReviewLinks = {
   placeId: string;
@@ -10,23 +10,14 @@ export type ReviewLinks = {
 };
 
 export function buildReviewLinks(placeId: string | undefined): ReviewLinks {
-  const id = placeId?.trim() ?? "";
-  const mapsSearch = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(MAPS_SEARCH_QUERY)}`;
-
-  if (!id) {
-    return {
-      placeId: "",
-      writeReviewUrl: mapsSearch,
-      reviewsUrl: mapsSearch,
-      mapsUrl: mapsSearch,
-    };
-  }
-
+  const id = placeId?.trim() || business.googlePlaceId;
   const encoded = encodeURIComponent(id);
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(business.googleListingName)}&query_place_id=${encoded}`;
+
   return {
     placeId: id,
     writeReviewUrl: `https://search.google.com/local/writereview?placeid=${encoded}`,
-    reviewsUrl: `https://search.google.com/local/reviews?placeid=${encoded}`,
-    mapsUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(MAPS_SEARCH_QUERY)}&query_place_id=${encoded}`,
+    reviewsUrl: mapsUrl,
+    mapsUrl,
   };
 }

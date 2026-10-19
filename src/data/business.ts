@@ -13,6 +13,10 @@ export const business = {
   facebook: "https://www.facebook.com/AELandworx",
   tiktok:
     "https://www.tiktok.com/@ae_landworx?is_from_webapp=1&sender_device=pc",
+  /** Google listing: "A&E Landworx Septic & Excavation". Not a secret. */
+  googleListingName: "A&E Landworx Septic & Excavation",
+  googlePlaceId: "ChIJY_jy-dpwGasRzM7D46Z3Njg",
+  googleCid: "4050556473535876812",
 } as const;
 
 export const services = [

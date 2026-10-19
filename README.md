@@ -26,18 +26,17 @@ production deploy.
 
 ## Google reviews
 
-The Reviews section can show the business's live Google reviews. It reads
-these environment variables (see `.env.example`):
+The Reviews section links to the Google listing and can show live review text when an API key is set (see `.env.example`).
+
+The Google listing is **A&E Landworx Septic & Excavation**. Its Place ID, `ChIJY_jy-dpwGasRzM7D46Z3Njg`, lives in `src/data/business.ts` and is used whenever the env vars below are empty. "Leave us a Google review" opens `https://search.google.com/local/writereview?placeid=...`. "See our reviews on Google" opens a Maps link with `query_place_id` for that listing.
 
 | Variable | Where it is read | What it does |
 | --- | --- | --- |
-| `VITE_GOOGLE_PLACE_ID` | Browser, at build time | Place ID for the "Leave us a Google review" button (`https://search.google.com/local/writereview?placeid=...`) and the "See our reviews on Google" link |
-| `GOOGLE_PLACE_ID` | Server, `/api/reviews` | Same Place ID, used to request reviews. Falls back to `VITE_GOOGLE_PLACE_ID` |
-| `GOOGLE_PLACES_API_KEY` | Server only | Places API (New) key. Do not prefix it with `VITE_` |
+| `VITE_GOOGLE_PLACE_ID` | Browser, at build time | Optional override of the default Place ID for those two buttons |
+| `GOOGLE_PLACE_ID` | Server, `/api/reviews` | Optional override used to request reviews. Falls back to `VITE_GOOGLE_PLACE_ID`, then the default Place ID |
+| `GOOGLE_PLACES_API_KEY` | Server only | Places API (New) key. Required to show live review text. Do not prefix it with `VITE_` |
 
-Find the Place ID in [Google's Place ID finder](https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder) for **A&E Landworx** in Union County, NC. Enable **Places API (New)** on the key.
-
-When the key or Place ID is missing, the section stays a styled prompt with those two Google links. With no Place ID, both links open a Google Maps search for "A&E Landworx Union County NC". The site does not show placeholder or invented reviews.
+Enable **Places API (New)** on the key. Without the key, the buttons still open the listing and the page does not invent reviews.
 
 On Vercel, add the variables in Project Settings before deploying. `VITE_` values are applied at build time, so redeploy after changing `VITE_GOOGLE_PLACE_ID`.
 
