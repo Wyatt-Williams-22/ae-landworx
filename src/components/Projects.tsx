@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
-import { business } from "../data/business";
 import { projectCategories } from "../data/projects";
 
 type GalleryPhoto = {
@@ -138,20 +137,6 @@ export default function Projects() {
           </div>
         </div>
 
-        {photos.length === 0 ? (
-          <p className="mx-auto mt-10 max-w-xl rounded-2xl border border-dashed border-brand-ink-900/15 bg-white px-6 py-10 text-center text-brand-ink-700/80">
-            {activeCategory?.emptyNote}{" "}
-            {activeCategory?.id === "grading-excavating" && (
-              <>
-                Call{" "}
-                <a href={business.phoneHref} className="font-semibold text-brand-green-700 hover:underline">
-                  {business.phone}
-                </a>{" "}
-                if you would like to see recent site work.
-              </>
-            )}
-          </p>
-        ) : (
         <div
           key={activeId}
           className="animate-fade-in mt-10 grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-3 lg:grid-cols-4"
@@ -174,7 +159,6 @@ export default function Projects() {
             </button>
           ))}
         </div>
-        )}
       </div>
 
       {lightboxPhoto && lightboxIndex !== null && (

@@ -9,7 +9,6 @@ export type ProjectCategory = {
   title: string;
   description: string;
   photos: ProjectPhoto[];
-  emptyNote?: string;
 };
 
 export const projectCategories: ProjectCategory[] = [
@@ -156,9 +155,54 @@ export const projectCategories: ProjectCategory[] = [
     label: "Grading & Excavating",
     title: "Grading & Excavating",
     description: "Site grading, land clearing, and excavating for builds, drainage, and property improvements.",
-    photos: [],
-    emptyNote:
-      "Grading and excavating photos are not in the gallery yet.",
+    photos: [
+      { src: "/projects/grading-excavating/cutting-trees.jpg", alt: "Cutting Trees" },
+      {
+        src: "/projects/grading-excavating/pushing-trees-with-mini-excavator.jpg",
+        alt: "Pushing Trees with a Mini Excavator",
+      },
+      {
+        src: "/projects/grading-excavating/clearing-with-4-in-1-bucket.jpg",
+        alt: "Clearing with a 4-in-1 Bucket",
+      },
+      { src: "/projects/grading-excavating/clearing-with-grapple.jpg", alt: "Clearing with a Grapple" },
+      { src: "/projects/grading-excavating/clearing-wooded-lot.jpg", alt: "Clearing a Wooded Lot" },
+      { src: "/projects/grading-excavating/pushing-over-a-tree.jpg", alt: "Pushing Over a Tree" },
+      {
+        src: "/projects/grading-excavating/stump-and-roots.jpg",
+        alt: "Stump and Roots After the Tree Was Removed",
+      },
+      {
+        src: "/projects/grading-excavating/cleared-lot-with-stump-pile.jpg",
+        alt: "Cleared Lot with a Stump Pile",
+      },
+      {
+        src: "/projects/grading-excavating/skid-steer-leveling-cleared-lot.jpg",
+        alt: "Skid Steer Leveling a Cleared Lot",
+      },
+      { src: "/projects/grading-excavating/before-grading.jpg", alt: "Before Grading" },
+      { src: "/projects/grading-excavating/after-grading.jpg", alt: "After Grading" },
+      { src: "/projects/grading-excavating/before-grading-sidewalk.jpg", alt: "Before Grading the Sidewalk" },
+      { src: "/projects/grading-excavating/after-grading-sidewalk.jpg", alt: "After Grading the Sidewalk" },
+      { src: "/projects/grading-excavating/grading-in-process.jpg", alt: "Grading in Process" },
+      { src: "/projects/grading-excavating/drainage-diversion.jpg", alt: "Drainage Diversion" },
+      {
+        src: "/projects/grading-excavating/final-grading-with-seed-and-straw.jpg",
+        alt: "Final Grading with Seed and Straw",
+      },
+      { src: "/projects/grading-excavating/before-harley-rake.jpg", alt: "Before Harley Rake Leveling" },
+      { src: "/projects/grading-excavating/after-harley-rake.jpg", alt: "After Harley Rake Leveling" },
+      { src: "/projects/grading-excavating/during-job-from-house.jpg", alt: "During the Job from the House" },
+      { src: "/projects/grading-excavating/finished-front-of-lot.jpg", alt: "Finished Front of the Lot" },
+      {
+        src: "/projects/grading-excavating/finished-front-by-paved-driveway.jpg",
+        alt: "Finished Front by the Paved Driveway",
+      },
+      { src: "/projects/grading-excavating/gravel-inside-in-process.jpg", alt: "Gravel Area Inside, in Process" },
+      { src: "/projects/grading-excavating/gravel-inside-final.jpg", alt: "Finished Gravel Area Inside" },
+      { src: "/projects/grading-excavating/gravel-outside-final.jpg", alt: "Finished Gravel Area Outside" },
+      { src: "/projects/grading-excavating/gravel-parking-final.jpg", alt: "Finished Gravel Parking Area" },
+    ],
   },
   {
     id: "culverts-driveways",
