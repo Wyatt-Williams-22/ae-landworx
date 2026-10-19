@@ -1,6 +1,6 @@
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { business } from "../data/business";
-import { FacebookIcon, TikTokIcon } from "./SocialIcons";
+import { SocialLinks } from "./SocialIcons";
 
 export default function Contact() {
   return (
@@ -86,26 +86,11 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="mt-10 flex justify-center gap-4">
-          <a
-            href={business.facebook}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="A&E Landworx on Facebook"
-            className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-ink-900 text-white transition-colors hover:bg-brand-purple-600"
-          >
-            <FacebookIcon className="h-5 w-5" />
-          </a>
-          <a
-            href={business.tiktok}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="A&E Landworx on TikTok"
-            className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-ink-900 text-white transition-colors hover:bg-brand-purple-600"
-          >
-            <TikTokIcon className="h-5 w-5" />
-          </a>
-        </div>
+        <SocialLinks
+          className="mt-10 flex justify-center gap-4"
+          linkClassName="flex h-12 w-12 items-center justify-center rounded-full bg-brand-ink-900 text-white transition-colors hover:bg-brand-purple-600"
+          iconClassName="h-5 w-5"
+        />
       </div>
     </section>
   );

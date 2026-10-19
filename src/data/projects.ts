@@ -1,119 +1,180 @@
-export const projectCategories = [
+export type ProjectPhoto = {
+  src: string;
+  alt: string;
+};
+
+export type ProjectCategory = {
+  id: string;
+  label: string;
+  title: string;
+  description: string;
+  photos: ProjectPhoto[];
+  emptyNote?: string;
+};
+
+export const projectCategories: ProjectCategory[] = [
   {
     id: "septic-installs",
     label: "Septic Installs",
-    title: "Standard & Low Profile Septic Installs",
-    description: "Conventional and low-profile septic system installations from dig to final cover.",
+    title: "Septic Installs",
+    description:
+      "Conventional, low-profile, and panel block septic system installations from dig to final cover.",
     photos: [
-      { src: "/projects/septic-installs/bh-separated-materials.jpg", alt: "BH Separated Materials" },
+      { src: "/projects/septic-installs/separated-materials.jpg", alt: "Separated Materials" },
       { src: "/projects/septic-installs/setting-grade.jpg", alt: "Setting Grade" },
-      { src: "/projects/septic-installs/al-machines-prior-to-digging.jpg", alt: "AL Machines Prior to Digging" },
+      { src: "/projects/septic-installs/machines-prior-to-digging.jpg", alt: "Machines Prior to Digging" },
       { src: "/projects/septic-installs/serial-chambers.jpg", alt: "Serial Chambers" },
-      { src: "/projects/septic-installs/al-chambers-prior-to-cover.jpg", alt: "AL Chambers Prior to Cover" },
-      { src: "/projects/septic-installs/bh-low-profile-drain-field-final-cover.jpg", alt: "BH Low Profile Drain Field Final Cover" },
-      { src: "/projects/septic-installs/portrait-of-chambers-prior-to-cover.jpg", alt: "Portrait of Chambers Prior to Cover" },
+      { src: "/projects/septic-installs/chambers-prior-to-cover.jpg", alt: "Chambers Prior to Cover" },
+      {
+        src: "/projects/septic-installs/low-profile-drain-field-final-cover.jpg",
+        alt: "Low Profile Drain Field Final Cover",
+      },
+      {
+        src: "/projects/septic-installs/portrait-of-chambers-prior-to-cover.jpg",
+        alt: "Portrait of Chambers Prior to Cover",
+      },
       { src: "/projects/septic-installs/applying-final-cover.jpg", alt: "Applying Final Cover" },
-      { src: "/projects/septic-installs/serial-chambers-with-length.jpg", alt: "Serial Chambers with Length" },
-      { src: "/projects/septic-installs/ll-chambers.jpg", alt: "LL Chambers" },
+      {
+        src: "/projects/septic-installs/serial-chambers-with-length.jpg",
+        alt: "Serial Chambers with Length",
+      },
+      { src: "/projects/septic-installs/chambers.jpg", alt: "Chambers" },
       { src: "/projects/septic-installs/finished-grading.jpg", alt: "Finished Grading" },
-      { src: "/projects/septic-installs/bh-rocks-from-tank-holes.jpg", alt: "BH Rocks from Tank Holes" },
-      { src: "/projects/septic-installs/ll-chambers-2.jpg", alt: "LL Chambers 2" },
+      { src: "/projects/septic-installs/rocks-from-tank-holes.jpg", alt: "Rocks from Tank Holes" },
+      { src: "/projects/septic-installs/chambers-2.jpg", alt: "Additional Chambers" },
       { src: "/projects/septic-installs/serial-chambers-2.jpg", alt: "Serial Chambers" },
-      { src: "/projects/septic-installs/open-tank-hole-with-caution-tape.jpg", alt: "Open Tank Hole with Caution Tape" },
-      { src: "/projects/septic-installs/bh-low-profile-drain-field.jpg", alt: "BH Low Profile Drain Field" },
-      { src: "/projects/septic-installs/ll-supply-line-with-mini.jpg", alt: "LL Supply Line with Mini" },
-      { src: "/projects/septic-installs/ll-slope.jpg", alt: "LL Slope" },
+      {
+        src: "/projects/septic-installs/open-tank-hole-with-caution-tape.jpg",
+        alt: "Open Tank Hole with Caution Tape",
+      },
+      { src: "/projects/septic-installs/low-profile-drain-field.jpg", alt: "Low Profile Drain Field" },
+      {
+        src: "/projects/septic-installs/supply-line-with-mini-excavator.jpg",
+        alt: "Supply Line with Mini Excavator",
+      },
+      { src: "/projects/septic-installs/sloped-trench.jpg", alt: "Sloped Trench with Gravel and Pipe" },
       { src: "/projects/septic-installs/chambers-installed.jpg", alt: "Chambers Installed" },
-    ],
-  },
-  {
-    id: "pos-inspections",
-    label: "POS Inspections",
-    title: "POS Septic Inspections",
-    description: "Point-of-sale septic inspections for buying and selling property.",
-    photos: [
-      { src: "/projects/pos-inspections/sf-septic-locate.jpg", alt: "Septic System Location During Inspection" },
-      { src: "/projects/pos-inspections/sf-septic-locate-d-box.jpg", alt: "Septic System Components Located During Inspection" },
-      { src: "/projects/pos-inspections/sg-septic-inspection-with-camera.jpg", alt: "Septic System Components Visualized During Point of Sale Inspection" },
-      { src: "/projects/pos-inspections/sg-septic-inspection.jpg", alt: "Septic System Components Visualized During Point of Sale Inspection" },
-    ],
-  },
-  {
-    id: "panel-block",
-    label: "Panel Block",
-    title: "T&J Panel Block (PPBPS) Installs",
-    description: "Panel block / PPBPS septic system installations.",
-    photos: [
       { src: "/projects/panel-block/tank-being-packed.jpg", alt: "Plastic Tank Installation" },
       { src: "/projects/panel-block/adam-in-trench-with-panels.jpg", alt: "Panel Block Trench (In Progress)" },
       { src: "/projects/panel-block/float-tree-in-riser.jpg", alt: "Risers Installed on a New Septic Tank" },
-      { src: "/projects/panel-block/tq-rainy-supplies.jpg", alt: "Panel Block Materials" },
-      { src: "/projects/panel-block/kid-catcher-for-safety.jpg", alt: "Safety is Always a Priority! Risers with Safety Lids and Safety Screws are Installed After the Tank is Set" },
+      { src: "/projects/panel-block/rainy-supplies.jpg", alt: "Panel Block Materials" },
+      {
+        src: "/projects/panel-block/kid-catcher-for-safety.jpg",
+        alt: "Safety is Always a Priority! Risers with Safety Lids and Safety Screws are Installed After the Tank is Set",
+      },
       { src: "/projects/panel-block/panels-in-trench.jpg", alt: "Panel Block Trench (In Progress)" },
       { src: "/projects/panel-block/open-trench-pre-panel.jpg", alt: "Panel Block Trench (In Progress)" },
-      { src: "/projects/panel-block/tq-broom-finish.jpg", alt: "Panel Block Prior to Final Cover" },
-      { src: "/projects/panel-block/tq-1x6-in-trench.jpg", alt: "Panel Block Trench (In Progress)" },
-      { src: "/projects/panel-block/jw-placing-lime-in-empty-trench.jpg", alt: "Panel Block Trench (In Progress)" },
-      { src: "/projects/panel-block/tq-panel-in-air.jpg", alt: "Moving Panel Block Materials into Place" },
-      { src: "/projects/panel-block/tq-open-trench.jpg", alt: "Panel Block Trench (In Progress)" },
-      { src: "/projects/panel-block/jw-finished-end-of-trench-with-foam-and-lids.jpg", alt: "Panel Block Trench (In Progress)" },
-      { src: "/projects/panel-block/tq-finished-trench.jpg", alt: "Panel Block Prior to Final Cover" },
-      { src: "/projects/panel-block/jw-open-trench-without-lids.jpg", alt: "Panel Block Trench (In Progress)" },
+      { src: "/projects/panel-block/broom-finish.jpg", alt: "Panel Block Prior to Final Cover" },
+      { src: "/projects/panel-block/one-by-six-in-trench.jpg", alt: "Panel Block Trench (In Progress)" },
+      {
+        src: "/projects/panel-block/placing-lime-in-empty-trench.jpg",
+        alt: "Panel Block Trench (In Progress)",
+      },
+      { src: "/projects/panel-block/panel-in-air.jpg", alt: "Moving Panel Block Materials into Place" },
+      { src: "/projects/panel-block/open-trench.jpg", alt: "Panel Block Trench (In Progress)" },
+      {
+        src: "/projects/panel-block/finished-end-of-trench-with-foam-and-lids.jpg",
+        alt: "Panel Block Trench (In Progress)",
+      },
+      { src: "/projects/panel-block/finished-trench.jpg", alt: "Panel Block Prior to Final Cover" },
+      {
+        src: "/projects/panel-block/open-trench-without-lids.jpg",
+        alt: "Panel Block Trench (In Progress)",
+      },
     ],
   },
   {
-    id: "culvert",
-    label: "Culvert",
-    title: "Culvert Work",
-    description: "Culvert replacement, pipe installs, and finish grading.",
-    photos: [
-      { src: "/projects/culvert/af-culvert-after.jpg", alt: "Culvert Replacement (After)" },
-      { src: "/projects/culvert/photo.jpg", alt: "Culvert Replacement (In Progress)" },
-      { src: "/projects/culvert/photo-2.jpg", alt: "Culvert Replacement (After)" },
-      { src: "/projects/culvert/photo-3.jpg", alt: "Culvert Replacement (After)" },
-      { src: "/projects/culvert/w-removing-existing-pipe.jpg", alt: "Culvert Replacement (In Progress)" },
-      { src: "/projects/culvert/w-install-new-pipe.jpg", alt: "Culvert Replacement (In Progress)" },
-      { src: "/projects/culvert/af-culvert-before.jpg", alt: "Culvert Replacement (Before)" },
-      { src: "/projects/culvert/photo-4.jpg", alt: "Culvert Replacement (In Progress)" },
-      { src: "/projects/culvert/w-seed-straw-2.jpg", alt: "Culvert Replacement (After)" },
-    ],
-  },
-  {
-    id: "septic-repairs",
+    id: "repairs",
     label: "Repairs",
     title: "Septic Repairs",
     description: "Tank, supply line, riser, and alarm panel repairs.",
     photos: [
       { src: "/projects/septic-repairs/photo.jpg", alt: "Septic Repairs" },
-      { src: "/projects/septic-repairs/ea-risers-with-kid-catcher.jpg", alt: "EA Risers with Kid Catcher" },
+      { src: "/projects/septic-repairs/risers-with-safety-lids.jpg", alt: "Risers with Safety Lids" },
       { src: "/projects/septic-repairs/old-alarm-panel.jpg", alt: "Old Alarm Panel" },
       { src: "/projects/septic-repairs/photo-2.jpg", alt: "Septic Repairs" },
       { src: "/projects/septic-repairs/new-alarm-panel.jpg", alt: "New Alarm Panel" },
       { src: "/projects/septic-repairs/photo-3.jpg", alt: "Septic Repairs" },
-      { src: "/projects/septic-repairs/mw-new-tank.jpg", alt: "MW New Tank" },
+      { src: "/projects/septic-repairs/new-tank.jpg", alt: "New Tank" },
       { src: "/projects/septic-repairs/water-at-fitting.jpg", alt: "Water at Fitting" },
       { src: "/projects/septic-repairs/cracked-old-riser.jpg", alt: "Cracked Old Riser" },
       { src: "/projects/septic-repairs/old-supply-line.jpg", alt: "Old Supply Line" },
       { src: "/projects/septic-repairs/photo-4.jpg", alt: "Septic Repairs" },
       { src: "/projects/septic-repairs/supply-line-from-tank.jpg", alt: "Supply Line From Tank" },
       { src: "/projects/septic-repairs/photo-5.jpg", alt: "Septic Repairs" },
-      { src: "/projects/septic-repairs/mw-old-tank.jpg", alt: "MW Old Tank" },
-      { src: "/projects/septic-repairs/mw-new-tank-hole.jpg", alt: "MW New Tank Hole" },
-      { src: "/projects/septic-repairs/repaire-supply-line.jpg", alt: "Repaire Supply Line" },
+      { src: "/projects/septic-repairs/old-tank.jpg", alt: "Old Tank" },
+      { src: "/projects/septic-repairs/new-tank-hole.jpg", alt: "New Tank Hole" },
+      { src: "/projects/septic-repairs/repaired-supply-line.jpg", alt: "Repaired Supply Line" },
       { src: "/projects/septic-repairs/photo-6.jpg", alt: "Septic Repairs" },
-      { src: "/projects/septic-repairs/ea-top-half-of-tank-over-roof.jpg", alt: "EA Top Half of Tank Over Roof" },
+      {
+        src: "/projects/septic-repairs/top-half-of-tank-over-roof.jpg",
+        alt: "Top Half of Tank Over the Roof",
+      },
       { src: "/projects/septic-repairs/photo-7.jpg", alt: "Septic Repairs" },
       { src: "/projects/septic-repairs/leaking-old-riser.jpg", alt: "Leaking Old Riser" },
       { src: "/projects/septic-repairs/risers-in-place.jpg", alt: "Risers in Place" },
       { src: "/projects/septic-repairs/roots-in-old-supply-line.jpg", alt: "Roots in Old Supply Line" },
-      { src: "/projects/septic-repairs/final-d-box.jpg", alt: "Final D Box" },
-      { src: "/projects/septic-repairs/mw-covering-old-tank.jpg", alt: "MW Covering Old Tank" },
-      { src: "/projects/septic-repairs/jw-two-d-boxes.jpg", alt: "JW Two D Boxes" },
-      { src: "/projects/septic-repairs/ea-crushed-tank-new-hole-with-rock.jpg", alt: "EA Crushed Tank & New Hole with Rock" },
+      { src: "/projects/septic-repairs/final-distribution-box.jpg", alt: "Final Distribution Box" },
+      { src: "/projects/septic-repairs/covering-old-tank.jpg", alt: "Covering the Old Tank" },
+      { src: "/projects/septic-repairs/two-distribution-boxes.jpg", alt: "Two Distribution Boxes" },
+      {
+        src: "/projects/septic-repairs/crushed-tank-new-hole-with-rock.jpg",
+        alt: "Crushed Tank and New Hole with Rock",
+      },
       { src: "/projects/septic-repairs/broken-crushed-supply-line.jpg", alt: "Broken & Crushed Supply Line" },
-      { src: "/projects/septic-repairs/ea-open-tank.jpg", alt: "EA Open Tank" },
+      { src: "/projects/septic-repairs/open-tank.jpg", alt: "Open Tank" },
       { src: "/projects/septic-repairs/photo-8.jpg", alt: "Septic Repairs" },
-      { src: "/projects/septic-repairs/old-supply-line-from-tank-to-d-box.jpg", alt: "Old Supply Line From Tank to D Box" },
+      {
+        src: "/projects/septic-repairs/old-supply-line-from-tank-to-distribution-box.jpg",
+        alt: "Old Supply Line from Tank to Distribution Box",
+      },
     ],
   },
-] as const;
+  {
+    id: "inspections",
+    label: "Inspections",
+    title: "Septic Inspections",
+    description: "Septic inspections, including point-of-sale inspections for buying and selling property.",
+    photos: [
+      { src: "/projects/pos-inspections/septic-locate.jpg", alt: "Septic System Location During Inspection" },
+      {
+        src: "/projects/pos-inspections/septic-locate-distribution-box.jpg",
+        alt: "Septic System Components Located During Inspection",
+      },
+      {
+        src: "/projects/pos-inspections/septic-inspection-with-camera.jpg",
+        alt: "Septic System Components Visualized During Point of Sale Inspection",
+      },
+      {
+        src: "/projects/pos-inspections/septic-inspection.jpg",
+        alt: "Septic System Components Visualized During Point of Sale Inspection",
+      },
+    ],
+  },
+  {
+    id: "grading-excavating",
+    label: "Grading & Excavating",
+    title: "Grading & Excavating",
+    description: "Site grading, land clearing, and excavating for builds, drainage, and property improvements.",
+    photos: [],
+    emptyNote:
+      "Grading and excavating photos are not in the gallery yet.",
+  },
+  {
+    id: "culverts-driveways",
+    label: "Culverts & Driveways",
+    title: "Culverts & Driveways",
+    description: "Culvert replacement, pipe installs, and driveway work.",
+    photos: [
+      { src: "/projects/culvert/culvert-after.jpg", alt: "Culvert Replacement (After)" },
+      { src: "/projects/culvert/photo.jpg", alt: "Culvert Replacement (In Progress)" },
+      { src: "/projects/culvert/photo-2.jpg", alt: "Culvert Replacement (After)" },
+      { src: "/projects/culvert/photo-3.jpg", alt: "Culvert Replacement (After)" },
+      { src: "/projects/culvert/removing-existing-pipe.jpg", alt: "Culvert Replacement (In Progress)" },
+      { src: "/projects/culvert/installing-new-pipe.jpg", alt: "Culvert Replacement (In Progress)" },
+      { src: "/projects/culvert/culvert-before.jpg", alt: "Culvert Replacement (Before)" },
+      { src: "/projects/culvert/photo-4.jpg", alt: "Culvert Replacement (In Progress)" },
+      { src: "/projects/culvert/seed-and-straw.jpg", alt: "Culvert Replacement (After)" },
+    ],
+  },
+];

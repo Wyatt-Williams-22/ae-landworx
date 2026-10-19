@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu, Phone, X } from "lucide-react";
 import logo from "../assets/logo.jpg";
 import { business, navLinks } from "../data/business";
+import { SocialLinks } from "./SocialIcons";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -34,7 +35,7 @@ export default function Navbar() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-5 lg:flex xl:gap-7">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -46,10 +47,15 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="flex items-center gap-2">
+          <SocialLinks
+            className="flex items-center gap-1"
+            linkClassName="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-brand-purple-600"
+            iconClassName="h-4 w-4"
+          />
           <a
             href={business.phoneHref}
-            className="flex items-center gap-2 rounded-full bg-brand-green-500 px-5 py-2.5 text-sm font-bold text-brand-ink-900 transition-colors hover:bg-brand-green-400"
+            className="hidden items-center gap-2 rounded-full bg-brand-green-500 px-5 py-2.5 text-sm font-bold text-brand-ink-900 transition-colors hover:bg-brand-green-400 lg:flex"
           >
             <Phone className="h-4 w-4" />
             {business.phone}

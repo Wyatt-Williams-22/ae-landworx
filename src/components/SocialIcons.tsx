@@ -1,3 +1,5 @@
+import { business } from "../data/business";
+
 export function FacebookIcon({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
@@ -11,5 +13,45 @@ export function TikTokIcon({ className }: { className?: string }) {
     <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
       <path d="M16.6 2h-3.2v13.7a3.1 3.1 0 1 1-2.2-2.97V9.4a6.3 6.3 0 1 0 5.4 6.24V8.7a8.2 8.2 0 0 0 4.8 1.54V7.03A5 5 0 0 1 16.6 2Z" />
     </svg>
+  );
+}
+
+const socialLinks = [
+  {
+    href: business.facebook,
+    label: "A&E Landworx on Facebook",
+    Icon: FacebookIcon,
+  },
+  {
+    href: business.tiktok,
+    label: "A&E Landworx on TikTok",
+    Icon: TikTokIcon,
+  },
+] as const;
+
+export function SocialLinks({
+  className,
+  linkClassName,
+  iconClassName,
+}: {
+  className?: string;
+  linkClassName?: string;
+  iconClassName?: string;
+}) {
+  return (
+    <div className={className}>
+      {socialLinks.map(({ href, label, Icon }) => (
+        <a
+          key={label}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={label}
+          className={linkClassName}
+        >
+          <Icon className={iconClassName} />
+        </a>
+      ))}
+    </div>
   );
 }

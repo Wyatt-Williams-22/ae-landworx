@@ -1,6 +1,6 @@
 import logo from "../assets/logo.jpg";
 import { business, navLinks } from "../data/business";
-import { FacebookIcon, TikTokIcon } from "./SocialIcons";
+import { SocialLinks } from "./SocialIcons";
 
 export default function Footer() {
   return (
@@ -30,26 +30,11 @@ export default function Footer() {
             ))}
           </nav>
 
-          <div className="flex gap-3">
-            <a
-              href={business.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="A&E Landworx on Facebook"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-brand-purple-600 hover:text-white"
-            >
-              <FacebookIcon className="h-4 w-4" />
-            </a>
-            <a
-              href={business.tiktok}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="A&E Landworx on TikTok"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-brand-purple-600 hover:text-white"
-            >
-              <TikTokIcon className="h-4 w-4" />
-            </a>
-          </div>
+          <SocialLinks
+            className="flex gap-3"
+            linkClassName="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-brand-purple-600 hover:text-white"
+            iconClassName="h-4 w-4"
+          />
         </div>
 
         <div className="mt-6 flex flex-col items-center justify-between gap-3 text-sm sm:flex-row">
