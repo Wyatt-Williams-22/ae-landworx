@@ -31,10 +31,10 @@ export default function Hero() {
           </h1>
 
           <p className="mt-6 text-lg text-white/75 sm:text-xl">
-            A&amp;E Landworx inspects (including POS), installs, and repairs
-            septic systems — residential and commercial — plus grading, land
-            clearing, excavating, perc holes, and driveways across North &amp;
-            South Carolina.
+            A&amp;E Landworx provides septic Installs, Repairs &amp; Inspections
+            — residential and commercial, including point-of-sale inspections —
+            plus grading, land clearing, excavating, perc holes, and driveways
+            across North &amp; South Carolina.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

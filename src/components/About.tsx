@@ -24,12 +24,12 @@ export default function About() {
             </p>
 
             <p className="mt-4 text-lg leading-relaxed text-brand-ink-700/85">
-              We offer septic inspections (including POS), install systems
-              from conventional to drip for residential and commercial
-              properties, and handle repairs across NC and SC. We also
-              provide grading, land clearing and excavating, dig perc holes,
-              and install or refresh driveways &mdash; all with the same
-              hands-on, family-first approach.
+              We offer septic Installs, Repairs &amp; Inspections for
+              residential and commercial properties, from conventional systems
+              to drip, across North and South Carolina. We also provide
+              grading, land clearing and excavating, dig perc holes, and
+              install or refresh driveways &mdash; all with the same hands-on,
+              family-first approach.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
